@@ -15,7 +15,7 @@ Switched to branch 'master'
 ### Exercise:
 1. Create your own Github fork of `https://github.com/nnja/advanced-git-exercises`.
 2. Look at your git remotes. Rename your `origin` remote (nnja's copy) to `upstream`. Add your personal fork as the `origin` remote.
-3. Nina will make a change to her copy of the repo. Make a different change to your local repo, then use `git pull --rebase` to merge them.
+3. Owner will make a change to her copy of the repo. Make a different change to your local repo, then use `git pull --rebase` to merge them.
 
 ## Solutions
 
@@ -23,9 +23,9 @@ Switched to branch 'master'
 In Github, go to `https://github.com/nnja/advanced-git-exercises` and create your own fork of this repo by clicking the Fork button in the top right corner. This should create a copy of the repo that belongs to you.
 
 ### Step 2 - Set up Remotes
-Now, we want to set up our local repository so that your fork is the origin, but we'll keep Nina's version of the repository as a remote called `upstream`.
+Now, we want to set up our local repository so that your fork is the origin, but we'll keep Owner's version of the repository as a remote called `upstream`.
 
-First, if you checked out `advanced-git-exercises` from Nina's Github, you should see something like this:
+First, if you checked out `advanced-git-exercises` from Owner's Github, you should see something like this:
 
 ```
 $> git remote -v
@@ -55,7 +55,7 @@ upstream	git@github.com:nnja/advanced-git-exercises.git (fetch)
 upstream	git@github.com:nnja/advanced-git-exercises.git (push)
 ```
 
-There, now we should have our two remotes set up. This will allow us to push and pull changes to our personal fork, `origin`, while also allowing us to pull in changes from Nina's `upstream` version of the repo.
+There, now we should have our two remotes set up. This will allow us to push and pull changes to our personal fork, `origin`, while also allowing us to pull in changes from Owner's `upstream` version of the repo.
 
 ### Step 3 - Pull with Rebase
 We should already be familiar with merging commits from a remote repo, but let's take a look at a handy option for pulling - `git pull --rebase`. As you might expect, this pulls down the changes from a remote, but instead of merging them, it rebases - any changes you've made are replayed on top of the remote's changes. This is especially useful if you're working on a continually changing codebase and don't want lots of unsightly merge commits in your history.
@@ -71,12 +71,12 @@ $> git branch --set-upstream-to origin/master
 Branch master set up to track local branch origin/master.
 ```
 
-For this example, we'll need to have a new commit on both the `upstream` repo and our local repo. First Nina will make a change to her version of the repo:
+For this example, we'll need to have a new commit on both the `upstream` repo and our local repo. First Owner will make a change to her version of the repo:
 
-**Don't follow the next set of instructions. These are the actions that Nina will take.**
+**Don't follow the next set of instructions. These are the actions that Owner will take.**
 
 ```
-# Nina does these steps:
+# Owner does these steps:
 
 $> echo "Change to upstream" > upstream_change.txt
 
